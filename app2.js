@@ -18,8 +18,17 @@ const equal = document.getElementById('=');
 const operator = document.getElementById('operator');
 
 equal.addEventListener('click', () => {
-    if ((operator.value === 'p') && (Number(numOneInput.value) + Number(numTwoInput.value) === randomNum.textContent)){
-        alert('aaa');
+    if ((operator.value === 'p') && (Number(numOneInput.value) + Number(numTwoInput.value) === generatedRandomNum)){
+        alert('You got it right');
+    } else if ((operator.value === 'm') && (Number(numOneInput.value) - Number(numTwoInput.value) === generatedRandomNum)){
+        alert('You got it right');
+    } else if ((operator.value === 't') && (Number(numOneInput.value) * Number(numTwoInput.value) === generatedRandomNum)){
+        alert('You got it right');
+    }
+    else if ((operator.value === 'd') && (Number(numOneInput.value) / Number(numTwoInput.value) === generatedRandomNum)){
+        alert('You got it right');
+    } else {
+        alert('Sorry, try again');
     }
 });
 
